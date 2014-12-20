@@ -1,0 +1,52 @@
+/*html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: table;
+	font-family: "Calibri";
+}*/
+body {
+    font-size: 13px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.containerContent {
+  padding: 40px 15px;
+}
+.mainContainer {
+     float: none;
+     margin-left: auto;
+     margin-right: auto;
+	text-align: center;
+	width:95%;
+}
+
+.ng-invalid.ng-dirty{
+border-color:#FA787E;
+} /* red border for invalid input in forms */
+.ng-valid.ng-dirty {
+border-color:#78FA89;
+} /* green border for valid input in forms */
+.accueil-sas{
+margin-top : 10px;
+margin-left : 10px;
+margin-right : 10px;
+margin-bottom : 10px;
+background-color : red;
+width:200px; 
+height:200px;
+}
+.image-module-pd{
+width:auto;
+height:50px;
+vertical-align: middle;
+}
+.titre-module{
+color:#428bca;
+}
+.sortable tr { /* Pour avoir un curseur sur les lignes des tableaux*/
+    cursor: pointer;
+}
+.alert{
+	padding: 8px 10px 8px 10px;
+}

@@ -1,0 +1,10 @@
+{
+"name" : "Client PS",
+"main" : "index.html",
+"window": {
+    "width": 1024,
+    "height": 768,
+    "toolbar": true, // Put false there in prod
+    "frame": true // Si frame = false alors toolbar = false 
+  }
+}

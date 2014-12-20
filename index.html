@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-ng-app="clientPS">
+<head>
+	<meta charset="utf-8">
+
+    <title>Client</title>
+	<!-- Bootstrap core CSS -->
+    <link href="includes/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="includes/css/mainstyle.css">
+	<script type="text/javascript" src="includes/server-application.js"></script>
+	<script type="text/javascript" src="includes/libs/md5.js"></script>
+	<script type="text/javascript" src="includes/libs/angular.js"></script>
+	<script type="text/javascript" src="includes/libs/angular-translate.js"></script>
+	<script type="text/javascript" src="includes/libs/angular-route.js"></script>
+	<script type="text/javascript" src="includes/libs/underscore-min.js"></script>
+	<script type="text/javascript" src="includes/application.js"></script>
+	<script type="text/javascript" src="includes/index-controllers.js"></script>
+	<script type="text/javascript" src="includes/routes.js"></script>
+	
+	
+	<!--<base href="/">-->
+</head>
+<body  data-ng-controller="ApplicationController as controller"> 
+
+<!-- Server's state -->
+<div class="mainContainer">
+	<div ng-show="controller.GetEtatConnexionServeur().length > 0" class="alert alert-danger" role="alert" style="display: inline-block;">
+		<span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>&nbsp;&nbsp;{{ controller.GetEtatConnexionServeur() }}
+	</div>
+</div>
+
+ <!-- HEADER AND NAVBAR -->
+        <header class="hidden-print" ng-show="controller.IsUserLogged()">
+            <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Angular Routing Example</a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/"><i class="fa fa-home"></i>{{ 'INDEX_HOME' | translate }}</a></li>
+					
+                    <li><a href ng-click="controller.LogOut()"><i class="fa fa-shield"></i>{{ 'INDEX_LOGOUT' | translate }}</a></li>
+                </ul>
+            </div>
+            </nav>
+        </header>
+
+        <!-- MAIN CONTENT AND INJECTED VIEWS -->
+        <div id="main" class="mainContainer" >
+
+			<div ng-view 
+			style="height:100%"></div>
+        </div>
+
+</body>
+</html>

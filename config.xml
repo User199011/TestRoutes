@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Configuration id="1">
+    <AdresseIP>localhost</AdresseIP>
+    <Port>1471</Port>
+  </Configuration>
+</Configuration>
